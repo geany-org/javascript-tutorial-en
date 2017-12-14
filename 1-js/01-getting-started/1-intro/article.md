@@ -67,55 +67,54 @@
 
 - مرورگرهای پیشرفته, اجازه کار با فایل ها را می دهند اما دسترسی محدود است و فقط در صورتی انجام می شود که کاربر اقدامات خاصی مانند حذف یک فایل در پنجره مرورگر یا انتخاب آن را انجام دهد
 
-راه هایی برای ارتباط با دوربین/میکروفون و سایر دستگاه ها وجود دارد اما آن ها نیاز به اجازه صریح کاربر دارند. بنابراین در صفحه ای که جاوا اسکریپت فعال است, ممکن است وب سایت دوربین را فعال نکند و امکان مشاهده محیط وجود نداشته باشد 
-- زبانه ها/ پنجره های مختلف معمولا در مورد یکدیگر چیزی نمی دانند. 
+راه هایی برای ارتباط با دوربین/میکروفون و سایر دستگاه ها وجود دارد اما آن ها نیاز به اجازه صریح کاربر دارند. بنابراین در صفحه ای که جاوا اسکریپت فعال است, ممکن است وب سایت, دوربین را فعال نکند و امکان مشاهده محیط وجود نداشته باشد
+- زبانه ها/ پنجره های مختلف معمولا در مورد یکدیگر چیزی نمی دانند. گاهی اوقات نیز جاوا اسکریپت در باز کردن پنجره ها نقش دارد به عنوان مثال یک پنجره ممکن است موجب باز شدن پنجره دیگر شود. اما حتی در این مورد ممکن است به اطلاعات دسترسی نداشته باشد اگرچه اطلاعات از یک دامنه یا پروتکل متفاوت باشد
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must contain a special JavaScript code that handles data exchange.
+    این موضوع *سیاست همان منبع* است و برای کار با آن, *هر دو صفحه* باید دارای یک کد ویژه جاوا اسکریپت باشند که با هم مبادله اطلاعات داشته باشند
 
-    The limitation is again for user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's safety limitations.
+    این محدودیت باز هم برای ایمنی کاربر است به طور مثال اگر کاربر صفحه ای از یک سایت باز کرده باشد (مثلا سایت جاوا اسکریپت) نباید قادر به دسترسی به یک تب جدید مرورگر و یک سایت دیگر (مثلا سایت جیمیل) و سرقت اطلاعات از آن جا باشد
 
 ![](limitations.png)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow installing plugin/extensions which may get extended permissions.
+اگر جاوا اسکریپت, خارج از مرورگر به عنوان مثال در سرور مورد استفاده قرار گیرد چنین محدودیت هایی وجود ندارد. علاوه بر این مرورگر های پیشرفته امکان نصب افزونه که ممکن است مجوزها و دسترسی ها را گسترش دهند, می دهد 
 
-## What makes JavaScript unique?
+## چه چیزی باعث شده تا جاوا اسکریپت منحصر به فرد شود؟
 
-There are at least *three* great things about JavaScript:
+در مورد جاوا اسکریپت حداقل *سه* چیز وجود دارد
 
 ```compare
-+ Full integration with HTML/CSS.
-+ Simple things done simply.
-+ Supported by all major browsers and enabled by default.
++ ادغام کامل با اچ تی ام ال/سی اس اس
++ چیزهای ساده به سادگی انجام می شود
++ توسط اکثر مرورگر های اصلی به طور پیش فرض فعال شده است
 ```
 
-Combined, these three things exist only in JavaScript and no other browser technology.
+این سه قابلیت فقط در جاوا اسکریپت وجود دارد و در دیگر تکنولوژی های مرورگر چنین قابلیت هایی امکان پذیر نمی باشد
 
-That's what makes JavaScript unique. That's why it's the most widespread tool to create browser interfaces.
+این قابلیت ها جاوا اسکریپت را منحصر به فرد کرده و به همین دلیل پر استفاده ترین ابزار برای ایجاد رابط کاربری مرورگر است
 
-While planning to learn a new technology, it's beneficial to check its perspectives. So let's move on to the modern trends that include new languages and browser abilities.
+وقت گذاشتن و برنامه ریزی برای یادگیری یک فناوری جدید در صورتی مفید است که جنبه های مختلف آن را بررسی کنید
 
 
-## Languages "over" JavaScript
+## زبان های خانواده جاوا اسکریپت
 
-The syntax of JavaScript does not suit everyone's needs. Different people want different features.
+ساختار دستوری جاوا اسکریپت برای هر فردی مناسب نیست. افراد مختلف به ویژگی های مختلف نیاز دارند
 
-That's to be expected, because projects and requirements are different for everyone.
+بنابراین این انتظار وجود دارد چرا که پروژه ها و نیازمندی ها برای هر کسی متفاوت است
 
-So recently a plethora of new languages appeared, which are *transpiled* (converted) to JavaScript before they run in the browser.
+اخیرا زبان های زیادی ساخته شده اند که قبل از اجرا در مرورگر, به جاوا اسکریپت تبدیل می شوند
 
-Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and autoconverting it "under the hood".
+ابزارهای مدرن, روش های مناسبی را برای کدنویسی سریع تر و کم تر به وجود آورده اند که برنامه نویس ها در زبان دیگری کد می نویسند و به طور خودکار به زبان مورد نظر تبدیل می شود 
 
-Examples of such languages:
+مثال هایی از این زبان ها عبارتند از
 
-- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript, it introduces shorter syntax, allowing to write more precise and clear code. Usually Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing", to simplify development and support of complex systems. It is developed by Microsoft.
-- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps). It was initially offered by Google as a replacement for JavaScript, but as of now, browsers require it to be transpiled to JavaScript just like the ones above.
+- [کافی اسکریپت](http://coffeescript.org/) یک زبان ترکیبی برای جاوا اسکریپت است که آن را با ساختار دستوری کوتاه تر معرفی می کند و اجازه می دهد تا کدهای دقیق تر و تمیز تری بنویسید. معمولا روبی این کار را انجام می دهد
+- [تایپ اسکریپت](http://www.typescriptlang.org/) این زبان بر روی تایپ کردن اطلاعات سخت گیرانه, ساده سازی توسعه و حمایت از سیستم های پیچیده متمرکز و توسط مایکروسافت توسعه داده شده است
+- [دارت](https://www.dartlang.org/) یک زبان مستقل است که موتور خود را دارد و در محیط های غیر مرورگر (مانند اپلیکیشن های تلفن همراه) اجرا می شود
 
-There are more. Of course even if we use one of those languages, we should also know JavaScript, to really understand what we're doing.
+زبان های زیاد دیگری وجود دارد البته اگر ما حتی از یکی از زبان ها استفاده کنیم باید جاوا اسکریپت را نیز بلد باشیم تا واقعا درک کنیم که چه کاری انجام می دهیم
 
-## Summary
+## خلاصه
 
-- JavaScript was initially created as a browser-only language, but now it is used in many other environments as well.
-- At this moment, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+- جاوا اسکریپت در ابتدا فقط به عنوان یک زبان مرورگر ایجاد شد اما در حال حاضر در بسیاری از محیط های دیگر استفاده می شود
+- در حال حاضر جاوا اسکریپت به طور گسترده در مرورگر در استفاده می شود و به خوبی با اچ تی ام ال و سی اس اس رابطه برقرار می کند
+- زبان های زیادی وجود دارند که کدهای آن ها در نهایت به جاوا اسکریپت تبدیل می شود توصیه می شود پس از تسلط به جاوا اسکریپت نگاهی به آن ها بیندازید
