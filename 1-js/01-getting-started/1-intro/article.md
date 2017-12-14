@@ -1,74 +1,74 @@
-# An Introduction to JavaScript
+# مقدمه ای بر جاوا اسکریپت
 
-Let's see what's so special about JavaScript, what we can achieve with it and which other technologies play well with it.
+بیایید ببینیم چه چیزی در مورد جاوا اسکریپت بسیار خاص است, چه کاری با آن می توانیم انجام دهیم و چه تکنولوژی های دیگری با آن کار می کنند
 
-## What is JavaScript?
+## جاوا اسکریپت چیست؟
 
-*JavaScript* was initially created to *"make webpages alive"*.
+جاوا اسکریپت* در ابتدا برای *"صفحات پویای وب"* ایجاد شد*
 
-The programs in this language are called *scripts*. They can be written right in the HTML and execute automatically as the page loads.
+برنامه های این زبان, اسکریپت نامیده می شوند و می توان آن ها را به طور مستقیم در اچ تی ام ال نوشت و به صورت خودکار در صفحه اجرا کرد
 
-Scripts are provided and executed as a plain text. They don't need a special preparation or a compilation to run.
+اسکریپت ها به عنوان یک متن ساده, نوشته و اجرا می شوند و به انجام عملیات خاص نیازی ندارند
 
-In this aspect, JavaScript is very different from another language called [Java](http://en.wikipedia.org/wiki/Java).
+در این زمینه, جاوا اسکریپت از زبان دیگری به نام جاوا بسیار متفاوت است
 
-```smart header="Why <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java language was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+```smart header="چرا <u>جاوا</u>اسکریپت؟"
+وقتی جاوا اسکریپت ساخته شد, ابتدا نام دیگری با عنوان "لایو اسکریپت" داشت اما زبان جاوا در آن زمان بسیار محبوب بود و این زبان جدید تصمیم گرفت به عنوان "برادر کوچک جاوا" به مردم کمک کند 
 
-But as it evolved, JavaScript became a fully independent language, with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+پس از تکامل به یک زبان کاملا مستقل تبدیل شد و در حال حاضر هیچ ارتباطی با جاوا ندارد
 ```
 
-At present, JavaScript can execute not only in the browser, but also on the server, or actually on any device where there exists a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+در حال حاضر جاوا اسکریپت می تواند علاوه بر مرورگر, بر روی سرور یا هر دستگاهی که دارای موتور جاوا اسکریپت است, اجرا شود
 
-The browser has an embedded engine, sometimes it's also called a "JavaScript virtual machine".
+مرورگر دارای یک موتور جاسازی شده است که از آن با نام "ماشین مجازی جاوا اسکریپت" نیز یاد می شود
 
-Different engines have different "codenames", for example:
+موتورهای مختلف, نام های مختلفی دارند به عنوان مثال
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Trident", "Chakra" for different versions of IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari etc.
+- وی ۸ در کروم و اپرا
+- اسپایدار مانکی در فایرفاکس
+- نام های دیگری مانند "تری دنت" و "چاکرا" برای نسخه های مختلف اینترنت اکسپلورر, "چاکرا کور" برای مایکروسافت اج, "نیترو" و "اسکورل فیش" برای سافاری و غیره
 
-The terms above are good to remember, because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+واژه های بالا بهتر است به خاطر سپرده شوند زیرا در مقاله های موجود در اینترنت به کار برده می شوند و ما نیز از آن ها استفاده خواهیم کرد 
 
-```smart header="How engines work?"
+```smart header="موتورها چگونه کار می کنند؟"
 
-Engines are complicated. But the basics are easy.
+موتورها یا انجین ها پیچیده هستند اما مبانی آن ها ساده است
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to the machine language.
-3. And then the machine code runs, pretty fast.
+۱- موتور (تعبیه شده در مرورگر) اسکریپت را خوانده و آن را تجزیه می کند
+۲- سپس این اسکریپت را به زبان ماشین ترجمه می کند
+۳- و در نهایت کد ماشین به سرعت اجرا می شود
 
-The engine applies optimizations on every stage of the process. It even watches the compiled script as it runs, analyzes the data that flows through it and applies optimizations to the machine code based on that knowledge. At the end, scripts are quite fast.
+این موتور, بهینه سازی را در هر مرحله از روند کار انجام می دهد, حتی اسکریپت ترجمه شده را اجرا و داده ها را از طریق آن تجزیه و تحلیل و در نهایت بهینه سازی ها را به کد ماشین اعمال می کند. لازم به ذکر است که اسکریپت ها بسیار سریع هستند
 ```
 
-## What can in-browser JavaScript do?
+## جاوا اسکریپت چه کاری می تواند انجام دهد؟
 
-The modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+جاوا اسکریپت مدرن, زبان برنامه نویسی "امنی" است. در این زبان امکان دسترسی های سطح پایین به حافظه یا پردازنده وجود ندارد زیرا در ابتدا برای مرورگر هایی ساخته شده بود که به چنین دسترسی هایی نیازی نداشتند
 
-The capabilities greatly depend on the environment that runs JavaScript. For instance, [Node.JS](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests etc.
+این قابلیت ها کاملا به محیطی که جاوا اسکریپت را اجرا می کنند بستگی دارد. به عنوان مثال نود جی اس از توابعی پشتیبانی می کند که جاوا اسکریپت را قادر به خواندن/نوشتن فایل های دلخواه, انجام درخواست های شبکه و غیره می کند
 
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user and the webserver.
+در مرورگر, جاوا اسکریپت می تواند همه چیز مربوط به صفحه وب را دستکاری کند یا با کاربر و سرور تعامل داشته باشد
 
-For instance, in-browser JavaScript is able to:
+به عنوان مثال جاوا اسکریپت در مرورگر قادر است تا
 
-- Add new HTML to the page, change the existing content, modify styles.
-- React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
-- Get and set cookies, ask questions to the visitor, show messages.
-- Remember the data on the client-side ("local storage").
+- اچ تی ام ال جدیدی را به صفحه اضافه کند, محتوای موجود را تغییر دهد یا استایل ها را اصلاح کند
+- به اقدامات کاربر مانند کلیک یا حرکت ماوس, و فشار کلید صفحه کلید واکنش نشان دهد
+- درخواست هایی را در شبکه به سرور ارسال کند یا آپلود و دانلود انجام دهد
+- کوکی ها را دریافت و تنظیم کنید, سوالات را به بازدید کننده بفرستید و پیام ها را نشان دهید
+- داده های سمت کاربر را یه خاطر (ذخیره سازی محلی) داشته باشد
 
-## What CAN'T in-browser JavaScript do?
+## جاوا اسکریپت چه کارهایی را در مرورگر نمی تواند انجام دهد؟
 
-JavaScript's abilities in the browser are limited for the sake of the user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+توانایی های جاوا اسکریپت در مرورگر به خاطر ایمنی کاربر محدود است. هدف این است که از دسترسی به اطلاعات خصوصی یا آسیب رساندن به اطلاعات کاربر جلوگیری شود
 
-The examples of such restrictions are:
+نمونه هایی از این محدودیت ها عبارتند از
 
-- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS system functions.
+- جاوا اسکریپت در یک صفحه وب, ممکن است فایل های دلخواه خواندن/نوشتن, کپی کردن یا اجرای برنامه ها را بر روی هارد دیسک نداشته باشد. بنابراین دسترسی مستقیم به توابع سیستم عامل را ندارد
 
-    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+- مرورگرهای پیشرفته, اجازه کار با فایل ها را می دهند اما دسترسی محدود است و فقط در صورتی انجام می شود که کاربر اقدامات خاصی مانند حذف یک فایل در پنجره مرورگر یا انتخاب آن را انجام دهد
 
-    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
-- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+راه هایی برای ارتباط با دوربین/میکروفون و سایر دستگاه ها وجود دارد اما آن ها نیاز به اجازه صریح کاربر دارند. بنابراین در صفحه ای که جاوا اسکریپت فعال است, ممکن است وب سایت دوربین را فعال نکند و امکان مشاهده محیط وجود نداشته باشد 
+- زبانه ها/ پنجره های مختلف معمولا در مورد یکدیگر چیزی نمی دانند. 
 
     This is called the "Same Origin Policy". To work around that, *both pages* must contain a special JavaScript code that handles data exchange.
 
