@@ -22,7 +22,7 @@ If you haven't considered selecting an IDE yet, look at the following variants:
 
 All of the IDEs listed above are available on both Windows and Mac, and the IDEs other than Visual Studio are also available on Linux.
 
-Most IDEs are paid, but have a trial period. Their cost is usually negligible compared to a qualified developer's salary, so just choose the best one for you.
+Most IDEs are paid, but have a trial period. Their cost is usually negligible compared to a qualified developers salary, so just choose the best one for you.
 
 ## Lightweight editors
 
