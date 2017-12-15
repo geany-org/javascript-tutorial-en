@@ -1,62 +1,62 @@
-# Code editors
+# ویرایشگرهای کد
 
-A code editor is the place where a programmer spends most of his time.
+یک ویرایشگر کد جایی است که برنامه نویس بیشتر وقت خود را در آن صرف می کند
 
-There are two archetypes: IDE and lightweight editors. Many people feel comfortable choosing one tool of each type.
+دو نوع از آن وجود دارد: محیط توسعه یکپارچه و ویراستارهای سبک
 
 [cut]
 
-## IDE
+## محیط توسعه یکپارچه (IDE)
 
-The term [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) means a powerful editor with many features that usually operates on a "whole project". As said, that's not just an editor, but a full-scale "development environment".
+اصطلاح محیط توسعه یکپارچه به معنای یک ویرایشگر قدرتمند با ویژگی هایی است که معمولا بر روی کل پروژه عمل می کنند. همانطور که گفته شد این فقط یک ویرایشگر نیست بلکه یک محیط توسعه کامل است
 
-An IDE loads the project (can be many files), and then allows navigation between files, provides autocompletion based on the whole project, integrates with a version management system (like [git](https://git-scm.com/)), a testing environment and other "project-level" stuff.
+یک "آی دی ای" پروژه را بارگذاری (می تواند فایل های زیادی باشد) و سپس امکان حرکت بین فایل ها را فراهم می کند. تکمیل خودکار بر اساس پروژه و ادغام با کنترل کننده نسخه مانند گیت از دیگر ویژگی های یک آی دی ای است
 
-If you haven't considered selecting an IDE yet, look at the following variants:
+اگر هنوز یک آی دی ای را برای خود در نظر نگرفته اید به موارد زیر نگاهی بیندازید
 
-- IntelliJ editors: [WebStorm](http://www.jetbrains.com/webstorm/) for frontend development and [PHPStorm (PHP)](http://www.jetbrains.com/phpstorm/), [IDEA (Java)](http://www.jetbrains.com/idea/), [RubyMine (Ruby)](http://www.jetbrains.com/ruby/) and others if you need additional languages.
-- Visual Studio is fine if you're a .NET developer, and a free version is available ([Visual Studio Community](https://www.visualstudio.com/vs/community/))
-- Eclipse-based products, like [Aptana](http://www.aptana.com/) and Zend Studio.
-- [Komodo IDE](http://www.activestate.com/komodo-ide) and its lightweight free version [Komodo Edit](http://www.activestate.com/komodo-edit).
+- IntelliJ ویرایشگرهای: [WebStorm](http://www.jetbrains.com/webstorm/) برای توسعه فرانت اند [PHPStorm (PHP)](http://www.jetbrains.com/phpstorm/), [IDEA (Java)](http://www.jetbrains.com/idea/), [RubyMine (Ruby)](http://www.jetbrains.com/ruby/) و اگر به زبان های دیگر نیاز دارید
+- اگر شما توسعه دهنده دات نت هستید ویژوال استدیو خوب است. لازم به ذکر است که یک نسخه رایگان در دسترس است ([Visual Studio Community](https://www.visualstudio.com/vs/community/))
+- محصولات مبتنی بر اکلیپس [Aptana](http://www.aptana.com/) و Zend Studio.
+- [Komodo IDE](http://www.activestate.com/komodo-ide) و نسخه رایگان کم حجم آن [Komodo Edit](http://www.activestate.com/komodo-edit).
 - [Netbeans](http://netbeans.org/).
 
-All of the IDEs listed above are available on both Windows and Mac, and the IDEs other than Visual Studio are also available on Linux.
+تمام مواردی که در بالا ذکر شدند همگی در ویندوز و مک قابل دسترس می باشند و ابزارهای دیگر به جز ویژوال استدیو در لینوکس وجود هستند
 
-Most IDEs are paid, but have a trial period. Their cost is usually negligible compared to a qualified developer's salary, so just choose the best one for you.
+اکثر آی دی ای ها غیر رایگان هستند اما یک دوره آزمایشی دارند. هزینه آن ها نسبت به حقوق و دستمزد توسعه دهندگان ناچیز است. بنابراین بهترین را انتخاب کنید
 
-## Lightweight editors
+## ویرایشگر های سبک
 
-"Lightweight editors" are not as powerful as IDEs, but they're fast, elegant and simple.
+ویرایشگر های سبک به اندازه آی دی ای ها قدرتمند نیستند, اما سریع, ظریف و ساده هستند
 
-They are mainly used to instantly open and edit a file.
+آن ها عمدتا برای سریع باز کردن و ویرایش یک فایل استفاده می شوند
 
-The main difference between a "lightweight editor" and an "IDE" is that an IDE works on a project-level, so it loads much more data on start, analyzes the project structure if needed and so on. A lightweight editor is much faster if we need only one file.
+تفاوت اصلی بین ویرایشگر سبک و محیط توسعه یکپارچه این است که یک آی دی ای بر روی سطح پروژه کار می کنند, بنابراین اطلاعات زیادی را برای شروع, بارگیری تجزیه و تحلیل ساختار پروژه در صورت نیز و سایر کارهای دیگر انجام می دهد. یک ویرایشگر, بسیار سریع تر است اگر ما فقط یک فایل داشته باشیم
 
-In practice, lightweight editors may have a lot of plugins including directory-level syntax analyzers and autocompleters, so there's no strict border between a lightweight editor and an IDE.
+در عمل, ممکن است ویرایشگرها دارای بسیاری از پلاگین های تحلیل و تکمیل کننده های خودکار ساختار کدها باشند بنابراین هیچ مرز سخت گیرانه ای بین آی دی ای و ادیتور وجود ندارد
 
-The following options deserve your attention:
+گزینه های زیر سزاوار توجه شما هستند
 
-- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
-- [Atom](https://atom.io/) (cross-platform, free).
-- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
-- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
-- Vim and Emacs are also cool, if you know how to use them.
+- [Visual Studio Code](https://code.visualstudio.com/) (چند سکویی, رایگان).
+- [Atom](https://atom.io/) (چند سکویی, رایگان.
+- [Sublime Text](http://www.sublimetext.com) (چند سکویی, غیر رایگان).
+- [Notepad++](https://notepad-plus-plus.org/) (ویندوز, رایگان).
+- وایم و ایمکس هم باحال هستند. اگر شما می دانید که چگونه از آن ها استفاده کنید
 
-## My favorites
+## علایق من
 
-The personal preference of the author is to have both an IDE for projects and a lightweight editor for quick and easy file editing.
+ترجیح شخصی نویسنده, هم داشتن آی دی ای و هم داشتن ادیتور برای ویرایش های سریع و آسان است
 
-I'm using:
+من از موارد زیر استفاده می کنم
 
-- [WebStorm](http://www.jetbrains.com/webstorm/) for JS, and if there is one more language in the project, then I switch to other Jetbrains editors like [PHPStorm](http://www.jetbrains.com/phpstorm/) (PHP), [IDEA](http://www.jetbrains.com/idea/) (Java), [RubyMine](http://www.jetbrains.com/ruby/) (Ruby). There are editors for other languages too, but I haven't used them.
-- As a lightweight editor -- [Sublime Text](http://www.sublimetext.com) or [Atom](https://atom.io/).
+- [web Storm](http://www.jetbrains.com/webstorm/) برای جاوا اسکریپت و اگر یک زبان دیگر در این پروژه وجود دارد, سپس به سایر ویرایشگرهای جت برینز مانند [PHPStorm](http://www.jetbrains.com/phpstorm/) (PHP), [IDEA](http://www.jetbrains.com/idea/) (Java), [RubyMine](http://www.jetbrains.com/ruby/) (Ruby). ویرایشگرهای دیگری هم برای زبان های دیگر وجود دارد ولی من از آن ها استفاده نمی کنم
+- یک ویرایشگر سبک و سریع -- [Sublime Text](http://www.sublimetext.com) یا [Atom](https://atom.io/).
 
-If you don't know what to choose, you can consider these ones.
+اگر شما نمی دانید که کدام را انتخاب کنید می توانید موارد زیر را در نظر بگیرید
 
-## Let's not argue
+## بیایید بحث نکنیم
 
-The editors in the lists above are those that either I or my friends who I consider good developers have been using for a long time and are happy with.
+ویرایشگرهایی که در فهرست بالا ارائه شده اند مواردی هستند که من و دوستانم به مدت طولانی با آن ها کار می کنیم و از آن ها لذت می بریم
 
-There are other great editors in our big world. Please choose the one you like the most.
+ویرایشگرهای دیگری در دنیای بزرگ ما وجود دارند. یکی از آن ها به را به سلیقه خودتان انتخاب کنید
 
-The choice of an editor, like any other tool, is individual and depends on your projects, habits, personal preferences.
+انتخاب یک ویرایشگر مانند هر ابزار دیگری شخصی است و به پروژه ها, عادت ها و سلیقه شخصی شما بستگی دارد
