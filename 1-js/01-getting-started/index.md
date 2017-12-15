@@ -1,3 +1,3 @@
-# An introduction
+# یک مقدمه
 
-About the JavaScript language and the environment to develop with it.
+درباره زبان جاوا اسکریپت و محیطی برای توسعه آن
